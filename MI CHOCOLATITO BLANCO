@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .note {
+            background: #ffcccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para mi amor</h1>
+        <p>Te he dejado algunas notas especiales. ¡Haz clic para descubrirlas!</p>
+        
+        <div class="note" onclick="showMessage(0)">Haz clic aquí ❤️</div>
+        <p class="hidden" id="message0">Eres lo mejor que me ha pasado. ¡Te amo! 💖</p>
+        
+        <div class="note" onclick="showMessage(1)">Otra sorpresita 💕</div>
+        <p class="hidden" id="message1">Cada día a tu lado es un regalo. 🥰</p>
+    </div>
+
+    <script>
+        function showMessage(index) {
+            document.getElementById("message" + index).classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
